@@ -2,7 +2,8 @@
   "resources": [
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},"order":0,},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},"order":1,},
-    {"id":{"name":"Object12","path":"objects/Object12/Object12.yy",},"order":1,},
+    {"id":{"name":"Bozo","path":"objects/Bozo/Bozo.yy",},"order":1,},
+    {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},"order":14,},
     {"id":{"name":"John_Wick","path":"objects/John_Wick/John_Wick.yy",},"order":1,},
     {"id":{"name":"Aimable","path":"objects/Aimable/Aimable.yy",},"order":0,},
     {"id":{"name":"Whack","path":"objects/Whack/Whack.yy",},"order":4,},

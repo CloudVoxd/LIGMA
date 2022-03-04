@@ -31,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Object12",
+  "name": "Bozo",
   "tags": [],
   "resourceType": "GMObject",
 }
