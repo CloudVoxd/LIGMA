@@ -4,5 +4,5 @@ if lifespan = 0
 }
 else
 {
-	lifespan = lifespan = 1
+	lifespan = lifespan - 1
 }
