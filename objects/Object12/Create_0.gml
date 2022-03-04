@@ -1,5 +1,7 @@
-/// @description Insert description here
-// You can write your code in this editor
-LOSX = 20;
-TrueHitx = 0;
-PlayerX = 0;
+
+state = e_state.idle; //enemy state, see Room1 creation code
+MovementSpeed = 0;
+//make sure to put the starting varibles BEFORE the code. -V
+
+
+

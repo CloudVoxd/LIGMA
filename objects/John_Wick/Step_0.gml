@@ -1,34 +1,30 @@
 image_angle = point_direction(x,y,mouse_x,mouse_y)
-if image_angle > 180
-{
-	Print("UWU")
-}
 if keyboard_check(vk_shift){
 	if keyboard_check(ord("W")){
-	y = y - 2
+	y = y - (MovementSpeed + Sprint)
 }
     if keyboard_check(ord("S")){
-	y = y + 2
+	y = y + (MovementSpeed + Sprint)
 }
     if keyboard_check(ord("A")){
-	x = x - 2
+	x = x - (MovementSpeed + Sprint)
 }
     if keyboard_check(ord("D")){
-	x = x + 2
+	x = x + (MovementSpeed + Sprint)
 	}
 }
 else{
 if keyboard_check(ord("W")){
-	y = y - 1
+	y = y - MovementSpeed
 }
 if keyboard_check(ord("S")){
-	y = y + 1
+	y = y + MovementSpeed
 }
 if keyboard_check(ord("A")){
-	x = x - 1
+	x = x - MovementSpeed
 }
 if keyboard_check(ord("D")){
-	x = x + 1
+	x = x + MovementSpeed
 }
 }
 
