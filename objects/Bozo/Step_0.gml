@@ -13,7 +13,7 @@ switch (state) //this changes enemy's state
 		
 		case e_state.chase: //when enemy se
 		{
-			MovementSpeed = 2;
+			MoveSpeed = 2;
 			x = median(x-MoveSpeed,John_Wick.x,x+MoveSpeed);
 			y = median(y-MoveSpeed,John_Wick.y,y+MoveSpeed);
 			
