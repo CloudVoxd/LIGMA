@@ -1,30 +1,30 @@
 image_angle = point_direction(x,y,mouse_x,mouse_y)
 if keyboard_check(vk_shift){
 	if keyboard_check(ord("W")){
-	y = y - (MovementSpeed + Sprint)
+	y = y - (MoveSpeed + Sprint)
 }
     if keyboard_check(ord("S")){
-	y = y + (MovementSpeed + Sprint)
+	y = y + (MoveSpeed + Sprint)
 }
     if keyboard_check(ord("A")){
-	x = x - (MovementSpeed + Sprint)
+	x = x - (MoveSpeed + Sprint)
 }
     if keyboard_check(ord("D")){
-	x = x + (MovementSpeed + Sprint)
+	x = x + (MoveSpeed + Sprint)
 	}
 }
 else{
 if keyboard_check(ord("W")){
-	y = y - MovementSpeed
+	y = y - MoveSpeed
 }
 if keyboard_check(ord("S")){
-	y = y + MovementSpeed
+	y = y + MoveSpeed
 }
 if keyboard_check(ord("A")){
-	x = x - MovementSpeed
+	x = x - MoveSpeed
 }
 if keyboard_check(ord("D")){
-	x = x + MovementSpeed
+	x = x + MoveSpeed
 }
 }
 

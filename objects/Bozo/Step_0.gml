@@ -13,17 +13,12 @@ switch (state) //this changes enemy's state
 		
 		case e_state.chase: //when enemy se
 		{
-			MovementSpeed = 2;
+			MoveSpeed = 2;
 			x = median(x-MoveSpeed,John_Wick.x,x+MoveSpeed);
 			y = median(y-MoveSpeed,John_Wick.y,y+MoveSpeed);
 			
 			image_angle = point_direction(x,y,John_Wick.x,John_Wick.y)
 			
-			if (distance_to_object(John_Wick) < -50) //this makes sprite mirrored, so it faces character, but doesn't
-			{
-				image_xscale = -1;
-				image_yscale = 1;
-			}
 			
 			if (distance_to_object(John_Wick) > 200) // focus lost -V
 			{
