@@ -1,58 +1,14 @@
 image_angle = point_direction(x,y,mouse_x,mouse_y)
-if image_angle > 180
+keyUp = keyboard_check(ord("W"));
+keyLeft = keyboard_check(ord("A"))
+keyDown = keyboard_check(ord("S"))
+keyRight = keyboard_check(ord("D"))
+keyAttack = mouse_check_button(mb_left)
+
+switch (state)
 {
-	Print("UWU")
-}
-if keyboard_check(vk_shift){
-	if keyboard_check(ord("W")){
-	y = y - 2
-}
-    if keyboard_check(ord("S")){
-	y = y + 2
-}
-    if keyboard_check(ord("A")){
-	x = x - 2
-}
-    if keyboard_check(ord("D")){
-	x = x + 2
-	}
-}
-else{
-if keyboard_check(ord("W")){
-	y = y - 1
-}
-if keyboard_check(ord("S")){
-	y = y + 1
-}
-if keyboard_check(ord("A")){
-	x = x - 1
-}
-if keyboard_check(ord("D")){
-	x = x + 1
-}
+	case PLAYERSTATE.player_free: PlayerState_Free(); break;
+	case PLAYERSTATE.attack_one: PlayerState_Attack_one(); break;
+	case PLAYERSTATE.attack_combo: PlayerState_Attack_combo(); break;
 }
 
-
-
-
-
-
-
-
-
-if x > room_width - 20
-{
-	x = xprevious
-}
-if x < 20
-{
-	x = xprevious
-}
-if y > room_height
-{
-	y = yprevious
-}
-if y < 20
-{
-	y = yprevious
-}
