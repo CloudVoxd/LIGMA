@@ -1,3 +1,4 @@
+
 Pspeed = 2;
 
 state =	PLAYERSTATE.player_free;
@@ -10,3 +11,5 @@ enum PLAYERSTATE
 	attack_one,
 	attack_combo
 }
+
+

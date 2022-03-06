@@ -1,16 +1,25 @@
-
-
-//Follow
-//var _Los = collision_line(x,y,LOSX,y,Aimable,false,true);
-//var _LosT = collision_point(x+TrueHitx,y,Aimable,false,true);
-
-//if (_Los)
-//{
-//	TrueHitx = (_Los.x - x) < LOSX ? (_Los.x - x) : LOSX
-//}
-//if _LosT = John_Wick.id
-//{
-//	x = median(x + 1,_LosT.x+TrueHitx,x - 1)
-//	y = median(y + 1,_LosT.y+TrueHitx,y - 1)
-//	image_angle = point_direction(x,y,_LosT.x+TrueHitx,John_Wick.y)
-//}
+switch (state) //this changes enemy's state
+{
+	case e_state.idle: //when enemy no se
+	{
+		MovementSpeed = 0;
+		if (distance_to_object(John_Wick) < 100) 
+		{
+			state = e_state.chase; //switches state if John is close
+		}
+		break;
+	}
+		
+		case e_state.chase: //when enemy se
+		{
+			MovementSpeed = 2;
+			x = median(x-MovementSpeed,John_Wick.x,x+MovementSpeed);
+			y = median(y-MovementSpeed,John_Wick.y,y+MovementSpeed);
+			image_angle = point_direction(x,y,John_Wick.x,John_Wick.y)
+			if (distance_to_object(John_Wick) > 200) // focus lost -V
+			{
+				state = e_state.idle //You forgot the off switch -V
+			}
+		}
+	break;
+}
