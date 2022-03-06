@@ -26,9 +26,13 @@ function PlayerState_Attack_one(){
 				ds_list_add(hit, hitID);
 				with (hitID)
 				{
+<<<<<<< HEAD
 					EnemyHit(); 
 				
 					//if enemy was hit stuff happens here
+=======
+					EnemyHit(); //if enemy was hit stuff happens here
+>>>>>>> pr/6
 				}
 			 }
 		}

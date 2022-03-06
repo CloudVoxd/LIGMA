@@ -1,6 +1,8 @@
 
-switch (state) //this changes enemy's state
+
+switch (state)
 {
+<<<<<<< HEAD
 	case e_state.idle: //when enemy no se
 	{
 		MoveSpeed = 0;
@@ -26,7 +28,15 @@ switch (state) //this changes enemy's state
 			}
 		}
 	break;
+=======
+	case ENEMYSTATE.enemy_free: EnemyState_Free(); break;
+	case ENEMYSTATE.enemy_chase: EnemyState_Pursue(); break;
+	case ENEMYSTATE.enemy_attack: EnemyState_Attack(); break;
+	case ENEMYSTATE.enemy_dead: EnemyState_Dead(); break;
+>>>>>>> pr/6
 }
+
+
 
 //Here starts my attempt to make an attack AI
 var attackBubble = collision_ellipse(x + -70, y + -70, x + 70, y + 70, John_Wick, true, 1); //if John in this bubble;
@@ -36,7 +46,6 @@ if (attackBubble)
 	if(attack == false) //attack will switch to true and enemy will attack (duh)
 	{
 		attack = true;
-		
 	}
 }
 

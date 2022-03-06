@@ -1,4 +1,5 @@
 image_angle = point_direction(x,y,mouse_x,mouse_y)
+<<<<<<< HEAD
 if keyboard_check(vk_shift){
 	if keyboard_check(ord("W")){
 	y = y - (MoveSpeed + Sprint)
@@ -29,26 +30,18 @@ if keyboard_check(ord("D")){
 }
 
 
+=======
+keyUp = keyboard_check(ord("W"));
+keyLeft = keyboard_check(ord("A"))
+keyDown = keyboard_check(ord("S"))
+keyRight = keyboard_check(ord("D"))
+keyAttack = mouse_check_button(mb_left)
+>>>>>>> pr/6
 
-
-
-
-
-
-
-if x > room_width - 20
+switch (state)
 {
-	x = xprevious
+	case PLAYERSTATE.player_free: PlayerState_Free(); break;
+	case PLAYERSTATE.attack_one: PlayerState_Attack_one(); break;
+	case PLAYERSTATE.attack_combo: PlayerState_Attack_combo(); break;
 }
-if x < 20
-{
-	x = xprevious
-}
-if y > room_height
-{
-	y = yprevious
-}
-if y < 20
-{
-	y = yprevious
-}
+
