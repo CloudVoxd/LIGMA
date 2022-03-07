@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PlayerState_Attack_one(){
+function PlayerState_Attack(){
 	
 	//start of the attack
 	if (sprite_index != sPlayer_attack)
@@ -37,6 +37,6 @@ function PlayerState_Attack_one(){
 	if (animation_end())
 	{
 		sprite_index = sIdle;
-		state = PLAYERSTATE.player_free;
+	   a_state = IsAttacking.player_idle
 	}
 }

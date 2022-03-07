@@ -2,8 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free(){
 	
-	if keyAttack{
-	
+if keyAttack{
+a_state = IsAttacking.player_attacking
+
 }
 
 if keyboard_check(vk_shift){
@@ -54,6 +55,11 @@ if y < 20
 {
 	y = yprevious
 }
+}
 
-if (keyAttack) state = PLAYERSTATE.attack_one;
+
+function PlayerState_Idle()
+{
+	if keyboard_check(ord("R"))
+	Print("what the fuck?")
 }

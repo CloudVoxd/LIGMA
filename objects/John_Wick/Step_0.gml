@@ -11,7 +11,10 @@ keyAttack = mouse_check_button(mb_left)
 switch (state)
 {
 	case PLAYERSTATE.player_free: PlayerState_Free(); break;
-	case PLAYERSTATE.attack_one: PlayerState_Attack_one(); break;
-	case PLAYERSTATE.attack_combo: PlayerState_Attack_combo(); break;
+	case PLAYERSTATE.player_dead: PlayerState_Dead(); break;
 }
-
+switch (a_state)
+{
+	case IsAttacking.player_attacking: PlayerState_Attack(); break;
+	case IsAttacking.player_idle: PlayerState_Idle(); break
+}
