@@ -2,42 +2,60 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free(){
 	
-	if keyAttack{
-	
+var dirX, dirY, dir, currentSpeed;
+
+dirX = 0;
+dirY = 0;
+
+if (right || left)
+{
+	dirX = right - left;
 }
 
-if keyboard_check(vk_shift){
-	if keyUp{
-	y = y - Pspeed *2;
-}
-    if keyDown{
-	y = y + Pspeed *2
-}
-    if keyLeft{
-	x = x - Pspeed *2
-}
-    if keyRight{
-	x = x + Pspeed *2
-	}
-}
-else{
-if keyUp{
-	y = y - Pspeed;
-}
-    if keyDown{
-	y = y + Pspeed
-}
-    if keyLeft{
-	x = x - Pspeed
-}
-    if keyRight{
-	x = x + Pspeed
-	}
+if (up || down)
+{
+	dirY = down - up;
 }
 
-	
-	
-	
+dir = point_direction(0, 0, dirX, dirY);
+
+currentSpeed = point_distance(0, 0, vel[@ X], vel[@ Y]);
+
+if (right || left)
+{
+	if (abs(currentSpeed) >= spd)
+	{
+		vel[@ X] = lengthdir_x(spd, dir);
+	}
+	else
+	{
+		vel[@ X] += lengthdir_x(acc, dir);
+	}
+}
+else
+{
+	vel[@ X] = lerp(vel[@ X], 0, fric)
+}
+
+if (up || down)
+{
+	if (abs(currentSpeed) >= spd)
+	{
+		vel[@ Y] = lengthdir_y(spd, dir);
+	}
+	else
+	{
+		vel[@ Y] += lengthdir_y(acc, dir);
+	}
+}
+else
+{
+	vel[@ Y] = lerp(vel[@ Y], 0, fric)
+}
+
+
+
+
 	if x > room_width - 20
 {
 	x = xprevious

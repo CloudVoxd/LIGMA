@@ -2,6 +2,7 @@
 state = e_state.idle; //enemy state, see Room1 creation code
 MoveSpeed = 0;
 attack = false; 
+hp = 1;
 
 state = ENEMYSTATE.enemy_free;
 

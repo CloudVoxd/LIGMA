@@ -11,4 +11,5 @@ function EnemyState_Pursue(){
 	{
 		state = e_state.idle;
 	}
+	
 }

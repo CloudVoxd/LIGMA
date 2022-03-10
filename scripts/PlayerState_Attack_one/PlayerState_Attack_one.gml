@@ -13,22 +13,22 @@ function PlayerState_Attack_one(){
 	//hitting and damage dealing sequence
 	mask_index = sPlayer_attackHB;
 	var hitNow = ds_list_create(); //this list contains all hit instances
-	var hits = instance_place_list(x,y,sBozo,hitNow,false); //checks how many Bozos were hit
+	var hits = instance_place_list(x,y,Bozo,hitNow,false); //checks how many Bozos were hit
 	
 	if (hits > 0) //if hit something
 	{
 		for (var i = 0; i < hits; i++) //bacically repeats hit sequence for everything that's been hit
 		{			
-			 var hitID = hitNow[| i]; //adds healthy enemy to wounded list
+			 //var hitID = hitNow[| i]; //adds healthy enemy to wounded list
 										//(again, will probably delete it)
-			 if (ds_list_find_index(hit, hitID) == -1)
-			 {
-				ds_list_add(hit, hitID);
-				with (hitID)
-				{
-					EnemyHit(); //if enemy was hit stuff happens here
-				}
-			 }
+			 //if (ds_list_find_index(hit, hitID) == -1)
+			// {
+				//ds_list_add(hit, hitID);
+				//with (hitID)
+				//{
+					EnemyHit(1); //if enemy was hit stuff happens here
+				//}
+			 //}
 		}
 	}
 	ds_list_destroy(hitNow);
