@@ -55,23 +55,5 @@ else
 
 
 
-
-	if x > room_width - 20
-{
-	x = xprevious
-}
-if x < 20
-{
-	x = xprevious
-}
-if y > room_height
-{
-	y = yprevious
-}
-if y < 20
-{
-	y = yprevious
-}
-
 if (keyAttack) state = PLAYERSTATE.attack_one;
 }
