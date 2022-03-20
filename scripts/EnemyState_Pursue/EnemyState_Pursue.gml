@@ -1,6 +1,10 @@
 
 function EnemyState_Pursue(){
 	
+
+	
+	
+	
 	MoveSpeed = 2;
 	x = median(x-MoveSpeed,John_Wick.x,x+MoveSpeed);
 	y = median(y-MoveSpeed,John_Wick.y,y+MoveSpeed);

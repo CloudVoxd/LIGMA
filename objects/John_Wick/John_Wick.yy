@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "group1",
-    "path": "folders/Objects/group1.yy",
+    "name": "Player",
+    "path": "folders/Objects/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "John_Wick",

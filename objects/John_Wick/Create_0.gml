@@ -1,11 +1,8 @@
-#macro X 0
-#macro Y 1
-
-vel = [0, 0];
-
-spd = 10;
-acc = 5;
-fric = .1;
+vx = 0; // velocity x
+vy = 0; // velocity y
+mv = 6; // maximal velocity
+acc = 3; // acceleration
+dacc = .2; // deacceleration
 
 state =	PLAYERSTATE.player_free;
 hit = ds_list_create(); //this list contains wounded enemies

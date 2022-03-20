@@ -3,7 +3,7 @@
     "name": "sBozo",
     "path": "sprites/sBozo/sBozo.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

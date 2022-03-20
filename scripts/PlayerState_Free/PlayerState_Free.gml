@@ -2,57 +2,36 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free(){
 	
-var dirX, dirY, dir, currentSpeed;
+var h = keyboard_check(right) - keyboard_check(left);
+var v = keyboard_check(down) - keyboard_check(up);
 
-dirX = 0;
-dirY = 0;
+var spd = sqrt(vx * vx + vy * vy);
 
-if (right || left)
-{
-	dirX = right - left;
-}
+if h == 0 && v == 0 {
+    // deaccelerate when not moving
+    if spd <= dacc {
+        vx = 0;
+        vy = 0;
+    } 
+	else {
+        vx -= vx / spd * dacc;
+        vy -= vy / spd * dacc;
+    }
+} 
+ 
+	else {
+        // accelerate
+        vx += h * acc;
+        vy += v * acc;
+        spd = sqrt(vx * vx + vy * vy);
+        if spd > mv {
+            vx = vx / spd * mv;
+            vy = vy / spd * mv;
+        }
+    }
 
-if (up || down)
-{
-	dirY = down - up;
-}
-
-dir = point_direction(0, 0, dirX, dirY);
-
-currentSpeed = point_distance(0, 0, vel[@ X], vel[@ Y]);
-
-if (right || left)
-{
-	if (abs(currentSpeed) >= spd)
-	{
-		vel[@ X] = lengthdir_x(spd, dir);
-	}
-	else
-	{
-		vel[@ X] += lengthdir_x(acc, dir);
-	}
-}
-else
-{
-	vel[@ X] = lerp(vel[@ X], 0, fric)
-}
-
-if (up || down)
-{
-	if (abs(currentSpeed) >= spd)
-	{
-		vel[@ Y] = lengthdir_y(spd, dir);
-	}
-	else
-	{
-		vel[@ Y] += lengthdir_y(acc, dir);
-	}
-}
-else
-{
-	vel[@ Y] = lerp(vel[@ Y], 0, fric)
-}
-
+x += vx;
+y += vy;
 
 
 if (keyAttack) state = PLAYERSTATE.attack_one;
