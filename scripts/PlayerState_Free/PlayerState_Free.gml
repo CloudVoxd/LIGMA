@@ -2,9 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free(){
 	
+<<<<<<< HEAD
 if keyAttack{
 a_state = IsAttacking.player_attacking
 
+=======
+	if keyAttack{
+	
+>>>>>>> parent of 0de278f (Sprites i guess)
 }
 
 if keyboard_check(vk_shift){
@@ -55,6 +60,7 @@ if y < 20
 {
 	y = yprevious
 }
+<<<<<<< HEAD
 }
 
 
@@ -62,4 +68,8 @@ function PlayerState_Idle()
 {
 	if keyboard_check(ord("R"))
 	Print("what the fuck?")
+=======
+
+if (keyAttack) state = PLAYERSTATE.attack_one;
+>>>>>>> parent of 0de278f (Sprites i guess)
 }
