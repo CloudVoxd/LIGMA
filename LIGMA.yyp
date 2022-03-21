@@ -1,6 +1,5 @@
 {
   "resources": [
-    {"id":{"name":"Cursor","path":"objects/Cursor/Cursor.yy",},"order":7,},
     {"id":{"name":"Button","path":"objects/Button/Button.yy",},"order":4,},
     {"id":{"name":"Button_background","path":"sprites/Button_background/Button_background.yy",},"order":6,},
     {"id":{"name":"Cursor_animado","path":"sprites/Cursor_animado/Cursor_animado.yy",},"order":8,},
