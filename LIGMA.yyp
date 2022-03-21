@@ -20,6 +20,7 @@
     {"id":{"name":"Aimable","path":"objects/Aimable/Aimable.yy",},"order":0,},
     {"id":{"name":"EnemyState_Free","path":"scripts/EnemyState_Free/EnemyState_Free.yy",},"order":6,},
     {"id":{"name":"EnemyState_Attack","path":"scripts/EnemyState_Attack/EnemyState_Attack.yy",},"order":4,},
+    {"id":{"name":"Collider","path":"scripts/Collider/Collider.yy",},"order":10,},
     {"id":{"name":"PlayerState_Attack_one","path":"scripts/PlayerState_Attack_one/PlayerState_Attack_one.yy",},"order":1,},
     {"id":{"name":"sBozo","path":"sprites/sBozo/sBozo.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},

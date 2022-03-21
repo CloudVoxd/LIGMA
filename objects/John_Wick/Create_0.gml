@@ -3,6 +3,7 @@ vy = 0; // velocity y
 mv = 6; // maximal velocity
 acc = 3; // acceleration
 dacc = .2; // deacceleration
+marker = 0
 
 state =	PLAYERSTATE.player_free;
 hit = ds_list_create(); //this list contains wounded enemies
