@@ -1,1 +1,0 @@
-ds_list_destroy(hit); //so there's no memory leak

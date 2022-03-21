@@ -2,58 +2,37 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free(){
 	
-	if keyAttack{
-	
-}
+var h = keyboard_check(right) - keyboard_check(left);
+var v = keyboard_check(down) - keyboard_check(up);
 
-if keyboard_check(vk_shift){
-	if keyUp{
-	y = y - Pspeed *2;
-}
-    if keyDown{
-	y = y + Pspeed *2
-}
-    if keyLeft{
-	x = x - Pspeed *2
-}
-    if keyRight{
-	x = x + Pspeed *2
-	}
-}
-else{
-if keyUp{
-	y = y - Pspeed;
-}
-    if keyDown{
-	y = y + Pspeed
-}
-    if keyLeft{
-	x = x - Pspeed
-}
-    if keyRight{
-	x = x + Pspeed
-	}
-}
+var spd = sqrt(vx * vx + vy * vy);
 
-	
-	
-	
-	if x > room_width - 20
-{
-	x = xprevious
-}
-if x < 20
-{
-	x = xprevious
-}
-if y > room_height
-{
-	y = yprevious
-}
-if y < 20
-{
-	y = yprevious
-}
+if h == 0 && v == 0 {
+    // deaccelerate when not moving
+    if spd <= dacc {
+        vx = 0;
+        vy = 0;
+    } 
+	else {
+        vx -= vx / spd * dacc;
+        vy -= vy / spd * dacc;
+    }
+} 
+ 
+	else {
+        // accelerate
+        vx += h * acc;
+        vy += v * acc;
+        spd = sqrt(vx * vx + vy * vy);
+        if spd > mv {
+            vx = vx / spd * mv;
+            vy = vy / spd * mv;
+        }
+    }
+
+x += vx;
+y += vy;
+
 
 if (keyAttack) state = PLAYERSTATE.attack_one;
 }
