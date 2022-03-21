@@ -1,5 +1,6 @@
 {
   "resources": [
+<<<<<<< HEAD
     {"id":{"name":"animation_end","path":"scripts/animation_end/animation_end.yy",},"order":8,},
     {"id":{"name":"EnemyHit","path":"scripts/EnemyHit/EnemyHit.yy",},"order":9,},
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},"order":0,},
@@ -20,6 +21,14 @@
     {"id":{"name":"PlayerState_Attack_one","path":"scripts/PlayerState_Attack_one/PlayerState_Attack_one.yy",},"order":1,},
     {"id":{"name":"sBozo","path":"sprites/sBozo/sBozo.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+=======
+    {"id":{"name":"Button","path":"objects/Button/Button.yy",},"order":4,},
+    {"id":{"name":"Button_background","path":"sprites/Button_background/Button_background.yy",},"order":6,},
+    {"id":{"name":"Cursor_animado","path":"sprites/Cursor_animado/Cursor_animado.yy",},"order":8,},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":5,},
+    {"id":{"name":"button_main","path":"sprites/button_main/button_main.yy",},"order":3,},
+    {"id":{"name":"Background","path":"sprites/Background/Background.yy",},"order":2,},
+>>>>>>> parent of 8603295 (Revert "Fixed")
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
