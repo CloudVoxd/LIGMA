@@ -1,4 +1,3 @@
-
 image_angle = point_direction(x,y,mouse_x,mouse_y)
 up = keyboard_check(ord("W"));
 left = keyboard_check(ord("A"))
