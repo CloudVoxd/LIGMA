@@ -1,1 +1,0 @@
-cursor_sprite = Cursor_animado
